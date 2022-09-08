@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        color: yellow;
+        background-color: orange;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row" id="product-container"></div>
+    </div>
+    <script>
+      // fetch promise
+      //   what is promise?
+      //   fullfilled yaa rejected
+      //   promise fullfilled => then()
+      //   promise reject => catch()
+
+      let productContainer = document.getElementById("product-container");
+
+      function showProduct(productData) {
+        for (const singleProduct of productData) {
+          const { image, title, price } = singleProduct;
+
+          let htmlData = `
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="${image}" alt="" />
+              <div class="card-body">
+                <h4> ${title} </h4>
+                <h6> ${price} </h6>
+              </div>
+              <div class="card-footer">
+                <button type="button" class="btn btn-primary">Primary</button>
+              </div>
+            </div>
+          </div>
+          `;
+          productContainer.insertAdjacentHTML("afterbegin", htmlData);
+        }
+
+        // for (const singleProduct of productData) {
+        //   document.write(`<img src="${singleProduct.image}" width="100px" />`);
+        //   document.write(`<h3>${singleProduct.title}</h3>`);
+        // }
+      }
+
+      fetch(`https://fakestoreapi.com/products`)
+        .then((resp) => resp.json())
+        .then((data) => {
+          showProduct(data);
+        })
+        .catch((err) => console.log(err));
+
+      //   setInterval(() => {
+      //     console.log("Hii");
+      //   }, 1000);
+
+      // statement1 initialValue
+      // statement2 condition
+      // statement3 inc/dec
+
+      //   console.log(1);
+      //   console.log(2);
+      //   console.log(3);
+      //   for (let number = 1; number <= 1000; number = number + 1) {
+      //     console.log("Hey");
+      //   }
+      //   console.log(4);
+      //   console.log(5);
+
+      // setTimeOut()
+      // setInterval()
+
+      // setTimeout( function , timer )
+      //   console.log(1);
+      //   console.log(1);
+      //   console.log(1);
+      //   console.log(1);
+      //   setTimeout(() => {
+      //     document.getElementById("para").style.color = "black";
+      //     document.getElementById("para").style.background = "white";
+      //   }, 1000);
+      //   console.log(1);
+      //   console.log(1);
+      //   console.log(1);
+      //   console.log(1);
+    </script>
+  </body>
+</html>

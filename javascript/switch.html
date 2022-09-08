@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let todayDay = new Date();
+      todayDay = todayDay.getDay();
+      console.log(todayDay);
+
+      switch (todayDay) {
+        case 0:
+          console.log("Sunday");
+          break;
+        case 1:
+          console.log("Monday");
+          break;
+        case 2:
+          console.log("Tuesday");
+          break;
+      }
+
+      //   let todayDay = "tuesday";
+      //   switch or if
+      //   switch (todayDay) {
+      //     case "monday":
+      //       console.log("Today is monday");
+      //       break;
+
+      //     case "tuesday":
+      //       console.log("Today is tuesday");
+      //       break;
+
+      //     case "wednesday":
+      //       console.log("Today is Wednesday");
+      //       break;
+
+      //     default:
+      //       console.log("To is No day");
+      //   }
+    </script>
+  </body>
+</html>

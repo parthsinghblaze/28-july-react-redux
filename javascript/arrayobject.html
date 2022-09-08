@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let products = [
+            {
+                product_name: "Samsung",
+                product_price: 29999,
+            },
+            {
+                product_name: "Nokia",
+                product_price: 39999,
+            },
+            {
+                product_name: "MI",
+                product_price: 2999,
+            },
+        ];
+
+        for (let singleProduct of products) {
+            document.write(`<p>Name : ${singleProduct.product_name}</p>`)
+            // console.log(`Name : ${singleProduct.product_name}`)
+            // console.log(`Price : ${singleProduct.product_price}`)
+            // console.log('--------------')
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      let data = `{
+            "category": "Mobile",
+            "products": [
+                {
+                    "product_company": "Samsung",
+                    "product_modal": "Galaxy A10",
+                    "product_price": 2999
+                },
+                {
+                    "product_company": "Nokia",
+                    "product_modal": "Nokia c11",
+                    "product_price": 1999
+                },
+                {
+                    "product_company": "Mi",
+                    "product_modal": "Note 6 pro",
+                    "product_price": 999
+                }
+            ]
+        }`;
+
+      // console.log(data)
+      const myJsonData = JSON.parse(data);
+      console.log(myJsonData);
+
+      const myStringData = JSON.stringify(myJsonData);
+      console.log(myStringData);
+    </script>
+    <!-- 
+        JSON => javascript object notation
+     -->
+  </body>
+</html>

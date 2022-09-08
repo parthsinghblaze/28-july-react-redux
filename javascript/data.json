@@ -1,0 +1,20 @@
+{
+    "category": "Mobile",
+    "products": [
+        {
+            "product_company": "Samsung",
+            "product_modal": "Galaxy A10",
+            "product_price": 2999
+        },
+        {
+            "product_company": "Nokia",
+            "product_modal": "Nokia c11",
+            "product_price": 1999
+        },
+        {
+            "product_company": "Mi",
+            "product_modal": "Note 6 pro",
+            "product_price": 999
+        }
+    ]
+}
